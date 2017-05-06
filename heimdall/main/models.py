@@ -27,3 +27,4 @@ class Location(models.Model):
 	lon = models.DecimalField(max_digits=25, decimal_places=10)
 	latD = models.DecimalField(max_digits=15, decimal_places=10,)
 	lonD = models.DecimalField(max_digits=15, decimal_places=10,)
+
