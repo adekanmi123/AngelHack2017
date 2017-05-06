@@ -10,4 +10,4 @@ class TrafficSerializer(serializers.HyperlinkedModelSerializer):
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Location
-		fields = ['lat', 'lon',]
+		fields = ['lat', 'lon', 'latD', 'lonD']

@@ -7,6 +7,7 @@ urlpatterns = format_suffix_patterns([
 	url(r'^traffic/$', views.TrafficView.as_view(), name='traffic-list',),
 	url(r'^traffic/(?P<pk>[0-9]+)/$', views.TrafficDetailView.as_view(), name='traffic-detail'),
 	url(r'^location/$', views.LocationView.as_view(), name='location-list'),
+	# whenever you want to edit, you'll edit here
 	url(r'^location/(?P<pk>[0-9]+)/$', views.LocationDetailView.as_view(), name='location-detail'),
 ])
 

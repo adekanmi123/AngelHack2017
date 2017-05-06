@@ -10,14 +10,20 @@ class Traffic(models.Model):
 		('Y', 'yellow'),
 		('G', 'green'),
 		)
-	area = models.CharField(default="New Delhi", max_length=40,)
-	lightValue = models.IntegerField()
+
+	DIRECTION = (
+		(1, 'forward'),
+		(2, 'backward'),
+		(3, 'left'),
+		(4, 'right'),
+		)
+		
+	lightValue = models.IntegerField(choices=DIRECTION)
 	lightColor = models.CharField(max_length=1, choices=LIGHT,)
 
-	def __str__(self):
-		return self.area
 
 class Location(models.Model):
 	lat = models.DecimalField(max_digits=15, decimal_places=10)
 	lon = models.DecimalField(max_digits=25, decimal_places=10)
-	area = models.CharField(default="New Delhi", max_length=40,)
+	latD = models.DecimalField(max_digits=15, decimal_places=10,)
+	lonD = models.DecimalField(max_digits=15, decimal_places=10,)

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry">
+  update();
+}
+	var lat = queryset.lat;
+	var lon = queryset.lon;
+	var latD = queryset.latD;
+	var lonD = queryset.lonD;
+function update() {
+	patha = { lat: lat, lng: lon}
+	pathb = { lat: latD, lng: lonD}
+	var heading = google.maps.geometry.spherical.computeHeading(patha, pathb);
+	document.getElementById('heading').value = heading;
+
+}
+</body>
+</html>

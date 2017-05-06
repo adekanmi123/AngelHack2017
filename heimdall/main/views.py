@@ -45,3 +45,19 @@ class TrafficView(generics.ListCreateAPIView):
 class TrafficDetailView(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Traffic.objects.all()
 	serializer_class = TrafficSerializer
+
+
+# for sending values to the index.html
+def SendValue(request):
+	lonD = Location.lonD;
+	latD = Location.latD;
+	lat = Location.lat;
+	lon = Location.lon;
+	queryset = {
+		'lonD' : lonD,
+		'latD' : latD,
+		'lat'  : lat,
+		'lon'  : lon,
+	}
+
+	return render(request, "index.html", queryset)
