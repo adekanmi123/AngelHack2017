@@ -9,6 +9,7 @@ urlpatterns = format_suffix_patterns([
 	url(r'^location/$', views.LocationView.as_view(), name='location-list'),
 	# whenever you want to edit, you'll edit here
 	url(r'^location/(?P<pk>[0-9]+)/$', views.LocationDetailView.as_view(), name='location-detail'),
+	url(r'^front/', views.SendValue,)
 ])
 
 

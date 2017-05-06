@@ -4,21 +4,38 @@
 	<title></title>
 </head>
 <body>
+<p>{{lat}}</p>
+<p>{{lon}}</p>
 
+<script>
+      // This example requires the Geometry library. Include the libraries=geometry
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry">
 
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry">
-  update();
-}
-	var lat = queryset.lat;
-	var lon = queryset.lon;
-	var latD = queryset.latD;
-	var lonD = queryset.lonD;
-function update() {
-	patha = { lat: lat, lng: lon}
-	pathb = { lat: latD, lng: lonD}
-	var heading = google.maps.geometry.spherical.computeHeading(patha, pathb);
-	document.getElementById('heading').value = heading;
+      var marker1, marker2;
+      var lat = {{lat}};
+      var lon = {{lon}};
+      var latD = {{latD}};
+      var lonD = {{lonD}};
 
-}
+      function initMap() {
+        marker1 = new google.maps.Marker({
+          position: {lat: lat, lng: lon}
+        });
+
+        marker2 = new google.maps.Marker({
+          position: {lat: latD, lng: lonD}
+        });
+
+        var path = [marker1.getPosition(), marker2.getPosition()];
+        var heading = google.maps.geometry.spherical.computeHeading(path[0], path[1]);
+        alert(heading);
+        // document.getElementById('heading').innerHTML=heading;
+        // document.getElementById('origin').innerHTML = path[0].toString();
+        // document.getElementById('destination').innerHTML = path[1].toString();
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0NDeZRq2O0X5sEuJt9avCBTep0c46ENI&libraries=geometry&callback=initMap"
+        async defer></script>
 </body>
 </html>

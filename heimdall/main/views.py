@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 
 # from django.http import HttpResponse,JsonResponse
 # from rest_framework.renderers import JSONRenderer
@@ -49,15 +49,18 @@ class TrafficDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 # for sending values to the index.html
 def SendValue(request):
-	lonD = Location.lonD;
-	latD = Location.latD;
-	lat = Location.lat;
-	lon = Location.lon;
+	# stuff = Location.objects.all()
+	stuff = get_object_or_404(Location)
+	lonD = stuff.lonD;
+	latD = stuff.latD;
+	lat =  stuff.lat;
+	lon = stuff.lon;
 	queryset = {
 		'lonD' : lonD,
 		'latD' : latD,
 		'lat'  : lat,
 		'lon'  : lon,
+		'hey'  :"heyaa",
 	}
 
 	return render(request, "index.html", queryset)
