@@ -4,8 +4,6 @@
 	<title></title>
 </head>
 <body>
-<p>{{lat}}</p>
-<p>{{lon}}</p>
 
 <script>
       // This example requires the Geometry library. Include the libraries=geometry
@@ -17,6 +15,7 @@
       var lon = {{lon}};
       var latD = {{latD}};
       var lonD = {{lonD}};
+      var head = {{heading}}
 
       function initMap() {
         marker1 = new google.maps.Marker({
@@ -29,11 +28,20 @@
 
         var path = [marker1.getPosition(), marker2.getPosition()];
         var heading = google.maps.geometry.spherical.computeHeading(path[0], path[1]);
-        alert(heading);
+        // alert(heading);
+        head = JSON.stringify(heading);
+        // document.getElementById("myVar").value= heading;
+
         // document.getElementById('heading').innerHTML=heading;
         // document.getElementById('origin').innerHTML = path[0].toString();
         // document.getElementById('destination').innerHTML = path[1].toString();
       }
+      var request = $.ajax({
+      url: "/heading/",
+      type: "POST",
+      data: head,
+      dataType: "json"
+    });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0NDeZRq2O0X5sEuJt9avCBTep0c46ENI&libraries=geometry&callback=initMap"
         async defer></script>

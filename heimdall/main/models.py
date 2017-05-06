@@ -23,8 +23,11 @@ class Traffic(models.Model):
 
 
 class Location(models.Model):
-	lat = models.DecimalField(max_digits=15, decimal_places=10)
-	lon = models.DecimalField(max_digits=15, decimal_places=10)
-	latD = models.DecimalField(max_digits=15, decimal_places=10,)
-	lonD = models.DecimalField(max_digits=15, decimal_places=10,)
+	lat = models.DecimalField(max_digits=25, decimal_places=10)
+	lon = models.DecimalField(max_digits=25, decimal_places=10)
+	latD = models.DecimalField(max_digits=25, decimal_places=10,)
+	lonD = models.DecimalField(max_digits=25, decimal_places=10,)
+
+class heading(models.Model):
+	heading = models.DecimalField(max_digits=25, decimal_places=10,default=00.00)
 

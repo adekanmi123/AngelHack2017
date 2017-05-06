@@ -1,4 +1,4 @@
-from .models import Traffic, Location
+from .models import Traffic, Location, heading
 from rest_framework import serializers
 
 class TrafficSerializer(serializers.HyperlinkedModelSerializer):
@@ -10,4 +10,10 @@ class TrafficSerializer(serializers.HyperlinkedModelSerializer):
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Location
-		fields = ['lat', 'lon', 'latD', 'lonD']
+		fields = ['lat', 'lon', 'latD', 'lonD','heading']
+
+
+class HeadingSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = heading
+		fields = ['heading',]

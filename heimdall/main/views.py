@@ -10,8 +10,8 @@ from django.shortcuts import render,get_object_or_404
 
 from rest_framework import generics
 # Create your views here.
-from .models import Traffic, Location
-from .serializers import TrafficSerializer, LocationSerializer
+from .models import Traffic, Location, heading
+from .serializers import TrafficSerializer, LocationSerializer, HeadingSerializer
 
 # creating an endpoint for the root of our api
 
@@ -36,7 +36,6 @@ class LocationDetailView(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Location.objects.all()
 	serializer_class = LocationSerializer
 
-
 class TrafficView(generics.ListCreateAPIView):
 	queryset = Traffic.objects.all()
 	serializer_class = TrafficSerializer
@@ -60,7 +59,9 @@ def SendValue(request):
 		'latD' : latD,
 		'lat'  : lat,
 		'lon'  : lon,
-		'hey'  :"heyaa",
 	}
-
 	return render(request, "index.html", queryset)
+
+class HeadingView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = heading.objects.all()
+	serializer_class = HeadingSerializer
