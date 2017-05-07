@@ -1,7 +1,7 @@
 # Sprite - Clear Hai !!
 
 Sprite  is a advanced traffic management system . It will help in solving 3 major problems of traffic .
-1. Providing way to ambulance in emergency situtations.
+1. Providing way to ambulance and other  emergency vechicles.
 2. Saving petrol
 3. Traffic congestion
 
