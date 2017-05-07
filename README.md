@@ -24,8 +24,9 @@ Sprite is well connected to your vehicle . It can show you traffic on your car d
 
 
 ## Hardware 
+![ScreenShot](https://raw.githubusercontent.com/daVincere/AngelHack2017/master/IMG_20170507_121611_HDR.jpg)
 
-
+![ScreenShot](https://raw.githubusercontent.com/daVincere/AngelHack2017/master/IMG_20170507_121705_HDR.jpg)
 
 ## Technologies used : 
 
