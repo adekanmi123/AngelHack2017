@@ -35,4 +35,4 @@ Sprite is well connected to your vehicle . It can show you traffic on your car d
 
 ## Technologies used : 
 
-python , embedded device , Qt (cross-platfrom ) framework  , C++ , QML , JS , PHP !!
+python , embedded device , Qt (cross-platfrom ) framework  , Android , JAVA , C++ , QML , JS , PHP !!
