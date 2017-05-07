@@ -28,6 +28,11 @@ Sprite is well connected to your vehicle . It can show you traffic on your car d
 
 ![ScreenShot](https://raw.githubusercontent.com/daVincere/AngelHack2017/master/IMG_20170507_121705_HDR.jpg)
 
+
+## Sprite App 
+
+![ScreenShot](https://raw.githubusercontent.com/daVincere/AngelHack2017/master/18337418_1391008447609599_2096883200_n.png)
+
 ## Technologies used : 
 
 python , embedded device , Qt (cross-platfrom ) framework  , C++ , QML , JS , PHP !!
