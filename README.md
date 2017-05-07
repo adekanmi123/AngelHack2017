@@ -1,10 +1,11 @@
-# project
+# Sprite - Clear Hai !!
 
-project  is a advanced traffic management system . It will help in solving 2 major problems of our life .
-1. Providing way to ambulance 
+Sprite  is a advanced traffic management system . It will help in solving 3 major problems of traffic .
+1. Providing way to ambulance in emergency situtations.
 2. Saving petrol
 3. Traffic congestion
 
+Sprite uses a specialized hardware control 
 
 
 
