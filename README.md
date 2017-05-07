@@ -1,6 +1,11 @@
-# Some_name
+# project
 
-Some_name is a 
+project  is a advanced traffic management system . It will help in solving 2 major problems of our life .
+1. Providing way to ambulance 
+2. Saving petrol
+3. Traffic congestion
+
+
 
 
 
