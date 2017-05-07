@@ -1,9 +1,9 @@
 # Sprite - Clear Hai !!
 
-Sprite  is a advanced traffic management system . It will help in solving 3 major problems of traffic .
-1. Providing way to ambulance and other  emergency vechicles.
-2. Saving petrol
-3. Traffic congestion
+Sprite  is a advanced traffic management system that helps in solving 3 major problems of traffic .
+1. Providing way to vehicles in emergencies such as ambulances, firetrucks etc.
+2. Saving fuel, and
+3. Traffic congestion.
 
 
 ## Description 
@@ -35,4 +35,4 @@ Sprite is well connected to your vehicle . It can show you traffic on your car d
 
 ## Technologies used : 
 
-python , embedded device , Qt (cross-platfrom ) framework  , Android , JAVA , C++ , QML , JS , PHP !!
+python, embedded device, Qt (cross-platfrom) framework, Android, JAVA, C++, QML, JS, PHP, Django!!
